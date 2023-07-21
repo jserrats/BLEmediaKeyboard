@@ -18,10 +18,13 @@ void loop() {
   if (bleKeyboard.isConnected()) {
     if (digitalRead(13) == LOW) {
       bleKeyboard.write(KEY_MEDIA_CONSUMER_CONTROL_CONFIGURATION);
+      //bleKeyboard.print("Hello world");
+      Serial.println("KEY_MEDIA_CONSUMER_CONTROL_CONFIGURATION");
       delay(500);
     }
     if (digitalRead(12) == LOW) {
       bleKeyboard.write(KEY_MEDIA_NEXT_TRACK);
+      Serial.println("KEY_MEDIA_NEXT_TRACK");
       delay(500);
     }
     if (digitalRead(14) == LOW) {
